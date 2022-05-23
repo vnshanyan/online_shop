@@ -1,12 +1,8 @@
-import {baseUrl} from "../../api/api"
 import { useState } from "react";
 import { AUTH_TABS } from "../../helpers/constants";
 import classes from "./Register.module.css"
-import classNames from "classnames"
 import { useForm } from "react-hook-form";
-import axios from "axios";
 import {useDispatch} from "react-redux"
-import {addUser} from "../../redux/slices/registerSlice"
 import {registerThunk} from "../../redux/thunks/registerThunk"
 
 const [LOGIN] = AUTH_TABS
@@ -15,15 +11,16 @@ const Register = () => {
     const dispatch = useDispatch()
     const [isRegisterSucceed, setIsRegisterSucceed] = useState(false);
    // const {setAuthRoute} = useAuthTab()
-   const {register, handleSubmit, formState: {errors}} = useForm()
+    const {register, handleSubmit, formState: {errors}} = useForm()
 
     const onSubmit = data => {
         if(data.password === data.rePassword){
             const user = {
+                id: data.login,
                 name: data.login,
                 password: data.password
             }
-            dispatch(registerThunk(user))
+            dispatch(registerThunk({user}))
             // axios.post(`${baseUrl}/users`,user)
             //     .then(res => {
             //         setIsRegisterSucceed(true)
