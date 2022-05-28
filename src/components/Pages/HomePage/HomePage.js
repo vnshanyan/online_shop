@@ -1,7 +1,9 @@
+import Cart from "../CartPage/Cart";
+
 const HomePage = () => {
     return (
         <div>
-            HomePage
+            <Cart/>
         </div>
     )
 }
