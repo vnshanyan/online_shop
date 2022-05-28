@@ -1,4 +1,3 @@
-import { AUTH_TABS } from "../../helpers/constants"
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { useForm } from "react-hook-form"
@@ -8,48 +7,45 @@ import {baseUrl} from "../../api/api"
 import { useDispatch } from "react-redux"
 import { setUser } from "../../redux/slices/loginSlice"
 
-const [, REGISTRATION] = AUTH_TABS
-
 const Login = () => {
     const [isLoginFailed, setIsLoginFailed] = useState(false);
-    //const {setAuthRoute} = useAuthTab()
     const dispatch = useDispatch()
     const {register, handleSubmit, formState: {errors}} = useForm()
     const navigate = useNavigate()
 
-    const onSubmit = data => {
+    const onSubmit = assgnData => {
         axios.get(`${baseUrl}/users`)
             .then(res => {
-                const user = res.data.find(item => item.name === data.login && item.password === data.password)
+                const user = res.data.find(item => item.name === assgnData.login && item.password === assgnData.password)
                 if(user){
-                    if(data.save){
-                        localStorage.setItem('user', data.login)
+                    if(assgnData.save){
+                        localStorage.setItem('user', assgnData.login)
                     } else {
-                        sessionStorage.setItem('user', data.login)
+                        sessionStorage.setItem('user', assgnData.login)
                     }
-                    dispatch(setUser(data.login))
+                    dispatch(setUser(assgnData.login))
                     navigate('../homePage')
                 }else{
                     setIsLoginFailed(true)
-                    console.log("User is not found!");
                 }
             })
     }
-    
+
     return (
         <div className={classes.container}>
             <form className={classes.form} onSubmit={handleSubmit(onSubmit)}>
-                <label className={classes.label}>
-                    Login
-                    <input {...register('login', {required: true})} type="text"/>
+                <h3>SIGN IN</h3>
+                {/* <label className={classes.label}>
+                    Login */}
+                    <input {...register('login', {required: true})} type="text" placeholder="Login"/>
                     <div>{errors?.login?.type}</div>
-                </label>
+                {/* </label> */}
 
-                <label className={classes.label}>
-                    Password
-                    <input {...register('password', {required: true})} type="password"/>
+                {/* <label className={classes.label}>
+                    Password */}
+                    <input {...register('password', {required: true})} type="password" placeholder="Password"/>
                     <div>{errors?.password?.type}</div>
-                </label>
+                {/* </label> */}
 
                 <label>
                     <input type="checkbox" {...register('save')}/>
@@ -57,9 +53,9 @@ const Login = () => {
                 </label>
                 <button type="submit">Log in</button>
             </form>
+            {(isLoginFailed || (errors.login || errors.password)) && <span>User is not found!</span>}
         </div>
     )
 }
-
 
 export default Login

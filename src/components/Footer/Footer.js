@@ -5,7 +5,7 @@ import classNames from "classnames"
 const Footer = () => {
     return (
         <div className={classes.footer}>
-            Footer
+             <p>Copyright Manimen Production © 2022</p>
         </div>
     )
 }

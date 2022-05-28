@@ -1,14 +1,19 @@
 {
   "users": [
     {
-      "id": "vard",
+      "id": "1095277a-bc3a-4c62-b833-21596968e64c",
       "name": "vard",
-      "password": "123456"
+      "password": "123456789"
     },
     {
-      "id": "hayk",
-      "name": "hayk",
-      "password": "123456789"
+      "id": "0a88669e-ded8-4803-9c80-cd53c27214f9",
+      "name": "Hayk",
+      "password": "1234567"
+    },
+    {
+      "id": "a6e5eb35-1d8b-4278-bad0-5ec740732e7a",
+      "name": "vard",
+      "password": "ddddd"
     }
   ]
 }

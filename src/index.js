@@ -5,15 +5,17 @@ import App from './App';
 import { BrowserRouter } from 'react-router-dom';
 import store from './redux/store';
 import { Provider } from 'react-redux';
+import AuthTabProvider from './contexts/AuthTabProvider';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <Provider store={store}>
     <BrowserRouter>
-      <React.StrictMode>
-        <App />
-      </React.StrictMode>
+      <AuthTabProvider>
+        <React.StrictMode>
+            <App />
+        </React.StrictMode>
+      </AuthTabProvider>
     </BrowserRouter>
   </Provider>
-  
 );

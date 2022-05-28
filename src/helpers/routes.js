@@ -10,13 +10,8 @@ export const MAIN_ROUTES = [
         element: <HomePage/>
     },
     {
-        path: 'contactUs',
-        title: 'CONTACT US',
-        element: ''
-    },
-    {
-        path: 'aboutUs',
-        title: 'ABOUT US',
+        path: 'products',
+        title: 'PRODUCTS',
         element: ''
     },
     {
@@ -30,15 +25,19 @@ export const MAIN_ROUTES = [
         element: <Register />
     },
     {
-        path: 'logout',
-        title: 'Log out',
-        element: <HomePage/>
+        path: 'cart',
+        title: 'Cart',
+        element: <Register />
     }
 ]
 
 
 export const ROUTES = [
     ...MAIN_ROUTES,
+    {
+        path: 'cart',
+        element: <Register/>
+    },
     {
         path: '*',
         element: <Navigate to='homePage'/>
