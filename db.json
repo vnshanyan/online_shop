@@ -1,6 +1,6 @@
 {
   "users": [],
-  "cartProducts": [
+  "products": [
     {
       "id": "1",
       "image": "https://5.imimg.com/data5/ECOM/Default/2022/5/AP/KJ/HN/148051309/1596107585306-black-4-originnm80prcnt-1000x1000.jpg",
@@ -29,6 +29,35 @@
       "price": "30$",
       "qty": "15"
     }
+  ],
+  "cartProducts": [
+    {
+      "id": "1",
+      "image": "https://5.imimg.com/data5/ECOM/Default/2022/5/AP/KJ/HN/148051309/1596107585306-black-4-originnm80prcnt-1000x1000.jpg",
+      "title": "DLS RUNNING SHOES FOR MENS AND BOYS | Shopee India",
+      "price": "50$",
+      "qty": "100"
+    },
+    {
+      "id": "2",
+      "image": "https://media.istockphoto.com/photos/elegant-black-leather-shoes-picture-id172417586?k=20&m=172417586&s=612x612&w=0&h=DDjvQhRgSYcH2F5rVt8iohGvkqCIteYuTCq3wpJuUi4=",
+      "title": "248,244 Mens Shoes Stock Photos, Pictures & Royalty-Free",
+      "price": "200$",
+      "qty": "12"
+    },
+    {
+      "id": "3",
+      "image": "https://cdn.vox-cdn.com/thumbor/pjcUw1kyqVQA8sbGFd1mz2g9pog=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/22406771/Exbfpl2WgAAQkl8_resized.jpeg",
+      "title": "Nike sues over Lil Nas X's 'unauthorized Satan Shoes' - The Verge",
+      "price": "100$",
+      "qty": "30"
+    },
+    {
+      "id": "4",
+      "image": "https://images.meesho.com/images/products/52483851/vje6h_512.jpg",
+      "title": "Men Casual Shoes - Buy Men Casual Shoes Online from 22458+ Options at Lowest Price | Meesho",
+      "price": "30$",
+      "qty": "15"
+    }
   ]
 }
-

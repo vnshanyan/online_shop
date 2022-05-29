@@ -8,12 +8,16 @@
     padding:10px;
     display: flex;
     gap: 15px;
-    grid-column-end: 11;
-    grid-column-start: 3;
+    grid-column-end: 10;
+    grid-column-start: 2;
     border: 2px solid black;
     border-radius: 10px;
 }
 .deleteItem{
     display: flex;
     align-items: end;
+}
+.buyButton{
+    grid-column-start: 10;
+    grid-column-end: 12;
 }
