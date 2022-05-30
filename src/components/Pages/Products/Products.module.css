@@ -19,25 +19,30 @@
 
 .product img {
     width: 200px;
+    height: 200px;
     min-width: 100%;
     min-height: 200px;
     border: 1px solid #000;
     background-color: #c6c6c6;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 .product p {
     width: 90%;
+    font-size: 18px;
     font-weight: 600;
     margin: 10px;
 }
 
 .product span {
+    font-size: 14px;
     font-weight: 400;
 }
 
 .product button {
-    width: 100%;
+    float: right;
+    width: 95px;
     height: 30px;
     font-weight: 600;
     background-color: #717371;
@@ -48,7 +53,7 @@
 }
 
 .product button:hover {
-    width: 100%;
+    width: 95px;
     height: 30px;
     font-weight: 600;
     background-color: #282928;
