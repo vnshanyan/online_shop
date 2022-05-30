@@ -1,0 +1,136 @@
+{
+    "users": [
+    {}
+  ],
+  
+    "products": [
+    {
+      "id": "1",
+      "category": "Electronics",
+      "name": "Camera Drone",
+      "description": "Professional F3 Drones GPS 5G WiFi FPV 4K/1080P HD Wide Angle Camera",
+      "price": "$128.17",
+      "picture": "drone.jpg"
+    },
+    {
+      "id": "2",
+      "category": "Electronics",
+      "name": "Lenovo X240",
+      "description": "Laptop 12.5inch 1.6GHz i5-4200U 16GB DDR3 256GB SSD Win 10 Pro",
+      "price": "$129.99",
+      "picture": "laptop.jpg"
+    },
+    {
+      "id": "3",
+      "category": "Fashion",
+      "name": "Mens Jeans",
+      "description": "Levis Slim Jeans 511 & 512 SEEPED INDIGO BLUE and Pinhead Rinse-Black",
+      "price": "$45.12",
+      "picture": "jeans.jpg"
+    },
+    {
+      "id": "4",
+      "category": "Fashion",
+      "name": "Mens Boots",
+      "description": "MERRELL Moab 2 Mid Waterproof Tactical Military Army Combat Desert Boots",
+      "price": "$172.99",
+      "picture": "boots.png"
+    },
+    {
+      "id": "5",
+      "category": "Power Tools",
+      "name": "Makita - Cordless Drill",
+      "description": "Makita Trapano Avvitatore con Percussione 18V 13 mm 42 Nm 2 Batterie - DHP453RFE",
+      "price": "$174.20",
+      "picture": "makita.jpg"
+    },
+    {
+      "id": "6",
+      "category": "Power Tools",
+      "name": "Dewalt - Circular Saw",
+      "description": "Dewalt 20-Volt MAX Cordless Brushless 6-1/2 inch Circular Saw. Model #DCS566",
+      "price": "$134.99",
+      "picture": "dewalt.jpg"
+    },
+    {
+      "id": "7",
+      "category": "Lamps & Chandeliers",
+      "name": "Led Lamp",
+      "description": "E27 E14 B22 G9 LED Maïs Ampoule 5W 8W 15W 20W 25W SMD5730 Blanc Chaud/Froid 220V",
+      "price": "$2.08",
+      "picture": "lamp.jpg"
+    },
+    {
+      "id": "8",
+      "category": "Lamps & Chandeliers",
+      "name": "Modern Chandelier",
+      "description": "Hanging Lamp Pendant Ceiling Fixture Chandelier for Kitchen",
+      "price": "$22.99",
+      "picture": "chandelier.png"
+    },
+    {
+      "id": "9",
+      "category": "Furniture",
+      "name": "Sofa",
+      "description": "Leather Sofa Black De Sede Model DS 2011 Very Maintained 1.AIO",
+      "price": "$2,765.91",
+      "picture": "sofa.jpg"
+    },
+    {
+      "id": "10",
+      "category": "Furniture",
+      "name": "Bookshelf",
+      "description": "Topbuy 8-Tier Modern Bookshelf Anti-fall Tree Bookcase Storage Rack Suitable",
+      "price": "$99.00",
+      "picture": "bookshelf.jpg"
+    },
+    {
+      "id": "11",
+      "category": "Kitchen Appliances",
+      "name": "Coffee Machine",
+      "description": "Russell Hobbs Velocity Coffee Machine 1,25L 10 Cup 24h Timer 24050-56",
+      "price": "$29.46",
+      "picture": "coffee.jpg"
+    },
+    {
+      "id": "12",
+      "category": "Kitchen Appliances",
+      "name": "Mini Oven",
+      "description": "Katlot 13L Electric Mini Oven Frying Pan Baking Machine Pizza Maker",
+      "price": "$145.74",
+      "picture": "oven.jpg"
+    },
+    {
+      "id": "13",
+      "category": "Home Improvement",
+      "name": "Air Conditioner",
+      "description": "Klarstein Air Conditioner Without Exhaust Hose, 4 - in - 1 Air Cooler, Quiet Fan",
+      "price": "$106.63",
+      "picture": "conditioner.jpg"
+    },
+    {
+      "id": "14",
+      "category": "Home Improvement",
+      "name": "Cooling Fan",
+      "description": "Meaco 1056P Cooling Pedestal Fan-Large Freestanding Fan",
+      "price": "$105.58",
+      "picture": "fan.jpg"
+    },
+    {
+      "id": "15",
+      "category": "Smartphones",
+      "name": "Samsung Galaxy S20",
+      "description": "NEW UNLOCKED Samsung Galaxy S20 5G SM-G981U 128GB GRAY UNLOCKED GSM+CDMA",
+      "price": "$478.88",
+      "picture": "samsung.png"
+    },
+    {
+      "id": "16",
+      "category": "Smartphones",
+      "name": "Xiaomi Redmi Note 9",
+      "description": "Xiaomi Redmi Note 9 64GB 128GB New Dual SIM 6,53inch Mobile Smartphone",
+      "price": "$280.83",
+      "picture": "xiaomi.jpg"
+    }
+  ]
+}
