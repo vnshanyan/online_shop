@@ -13,7 +13,7 @@ const Products = () => {
                             <span>Category: {product.category}</span>
                             <p>{product.name}</p>
                             <span>{product.description}</span>
-                            <p>{product.price} <button>Add to Card</button></p>
+                            <p>${product.price} <button>Add to Card</button></p>
                         </div>
                     );
                 })

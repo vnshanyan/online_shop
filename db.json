@@ -9,7 +9,7 @@
       "category": "Electronics",
       "name": "Camera Drone",
       "description": "Professional F3 Drones GPS 5G WiFi FPV 4K/1080P HD Wide Angle Camera",
-      "price": "$128.17",
+      "price": 128.17,
       "quantity": 6,
       "picture": "https://images.unsplash.com/photo-1495810551032-2043a52a19c5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
     },
@@ -18,7 +18,7 @@
       "category": "Electronics",
       "name": "Lenovo X240",
       "description": "Laptop 12.5inch 1.6GHz i5-4200U 16GB DDR3 256GB SSD Win 10 Pro",
-      "price": "$129.99",
+      "price": 129.99,
       "quantity": 3,
       "picture": "https://images.unsplash.com/photo-1610572589034-db4158d44066?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80g"
     },
@@ -27,7 +27,7 @@
       "category": "Fashion",
       "name": "Mens Jeans",
       "description": "Levis Slim Jeans 511 & 512 SEEPED INDIGO BLUE and Pinhead Rinse-Black",
-      "price": "$45.12",
+      "price": 45.12,
       "quantity": 16,
       "picture": "https://i.ebayimg.com/images/g/W20AAOSwsvNiG27N/s-l400.jpg"
     },
@@ -36,7 +36,7 @@
       "category": "Fashion",
       "name": "Mens Boots",
       "description": "MERRELL Moab 2 Mid Waterproof Tactical Military Army Combat Desert Boots",
-      "price": "$172.99",
+      "price": 172.99,
       "quantity": 9,
       "picture": "https://www.specshop.pl/eng_pm_Merrell-Moab-2-Mid-Tactical-Waterproof-Boot-Coyote-J15849-18594_3.jpg"
     },
@@ -45,7 +45,7 @@
       "category": "Power Tools",
       "name": "Makita - Cordless Drill",
       "description": "Makita Trapano Avvitatore con Percussione 18V 13 mm 42 Nm 2 Batterie - DHP453RFE",
-      "price": "$174.20",
+      "price": 174.20,
       "quantity": 4,
       "picture": "https://media.wemena.com/productlarge/35265_22195_6317dwae__44107.1525592474.jpg?v1"
     },
@@ -54,7 +54,7 @@
       "category": "Power Tools",
       "name": "Dewalt - Circular Saw",
       "description": "Dewalt 20-Volt MAX Cordless Brushless 6-1/2 inch Circular Saw. Model #DCS566",
-      "price": "$134.99",
+      "price": 134.99,
       "quantity": 8,
       "picture": "https://mobileimages.lowes.com/productimages/e12fbfeb-e735-41ed-be23-3d690bd90276/47007360_2.jpg"
     },
@@ -63,7 +63,7 @@
       "category": "Lamps & Chandeliers",
       "name": "Led Lamp",
       "description": "E27 E14 B22 G9 LED Maïs Ampoule 5W 8W 15W 20W 25W SMD5730 Blanc Chaud/Froid 220V",
-      "price": "$2.08",
+      "price": 2.08,
       "quantity": 40,
       "picture": "https://i.ebayimg.com/images/g/LK4AAOSwBQZg98y2/s-l400.jpg"
     },
@@ -72,7 +72,7 @@
       "category": "Lamps & Chandeliers",
       "name": "Modern Chandelier",
       "description": "Hanging Lamp Pendant Ceiling Fixture Chandelier for Kitchen",
-      "price": "$22.99",
+      "price": 22.99,
       "quantity": 12,
       "picture": "https://ae01.alicdn.com/kf/HTB14M7GazfguuRjSspaq6yXVXXau/Modern-Glass-Kitchen-Island-Pendant-Light-LED-lamp-Bedside-Hanging-Lamp-Ceiling-Lamps-Lighting-Fixtures-Bedroom.jpg_Q90.jpg_.webp"
     },
@@ -81,7 +81,7 @@
       "category": "Furniture",
       "name": "Sofa",
       "description": "Leather Sofa Black De Sede Model DS 2011 Very Maintained 1.AIO",
-      "price": "$2,765.91",
+      "price": 2765.91,
       "quantity": 5,
       "picture": "https://www.picclickimg.com/d/l400/pict/325095438582_/Vintage-De-Sede-DS-2011-Leather-Sofa-1980.jpg"
     },
@@ -90,7 +90,7 @@
       "category": "Furniture",
       "name": "Bookshelf",
       "description": "Topbuy 8-Tier Modern Bookshelf Anti-fall Tree Bookcase Storage Rack Suitable",
-      "price": "$99.00",
+      "price": 99.00,
       "quantity": 3,
       "picture": "https://d3d71ba2asa5oz.cloudfront.net/12008648/images/topb005067%205.jpg"
     },
@@ -99,7 +99,7 @@
       "category": "Kitchen Appliances",
       "name": "Coffee Machine",
       "description": "Russell Hobbs Velocity Coffee Machine 1,25L 10 Cup 24h Timer 24050-56",
-      "price": "$29.46",
+      "price": 29.46,
       "quantity": 7,
       "picture": "https://cf.shopee.sg/file/acd71096bb8bffc3e07ea2f208bf2586"
     },
@@ -108,7 +108,7 @@
       "category": "Kitchen Appliances",
       "name": "Mini Oven",
       "description": "Katlot 13L Electric Mini Oven Frying Pan Baking Machine Pizza Maker",
-      "price": "$145.74",
+      "price": 145.74,
       "quantity": 14,
       "picture": "https://i.ebayimg.com/images/g/FQgAAOSw2dFfaz3l/s-l400.jpg"
     },
@@ -117,7 +117,7 @@
       "category": "Home Improvement",
       "name": "Air Conditioner",
       "description": "Klarstein Air Conditioner Without Exhaust Hose, 4 - in - 1 Air Cooler, Quiet Fan",
-      "price": "$106.63",
+      "price": 106.63,
       "quantity": 22,
       "picture": "https://m.media-amazon.com/images/I/71FJf49CPeL._AC_SL1500_.jpg"
     },
@@ -126,7 +126,7 @@
       "category": "Home Improvement",
       "name": "Cooling Fan",
       "description": "Meaco 1056P Cooling Pedestal Fan-Large Freestanding Fan",
-      "price": "$105.58",
+      "price": 105.58,
       "quantity": 30,
       "picture": "https://i.ebayimg.com/images/g/ROMAAOSwnj9g3IfR/s-l640.jpg"
     },
@@ -135,7 +135,7 @@
       "category": "Smartphones",
       "name": "Samsung Galaxy S20",
       "description": "NEW UNLOCKED Samsung Galaxy S20 5G SM-G981U 128GB GRAY UNLOCKED GSM+CDMA",
-      "price": "$478.88",
+      "price": 478.88,
       "quantity": 80,
       "picture": "https://i.ebayimg.com/images/g/BAMAAOSwhQJhC3ty/s-l500.png"
     },
@@ -144,7 +144,7 @@
       "category": "Smartphones",
       "name": "Xiaomi Redmi Note 9",
       "description": "Xiaomi Redmi Note 9 64GB 128GB New Dual SIM 6,53inch Mobile Smartphone",
-      "price": "$280.83",
+      "price": 280.83,
       "quantity": 60,
       "picture": "https://cdn.movertix.com/media/catalog/product/cache/image/1200x/x/i/xiaomi-redmi-note-9-dual-sim-onyx-black-128gb-and-4gb-ram-side_3.jpg"
     }
