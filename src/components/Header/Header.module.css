@@ -47,3 +47,9 @@
     width: auto;
 }
 
+.prodCount {
+    background-color: #f04040;
+    border: none;
+    color: #ffffff;
+    width: 1.5rem;
+}

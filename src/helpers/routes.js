@@ -3,6 +3,7 @@ import Login from "../components/Login/Login"
 import Register from "../components/Register/Register"
 import { Navigate } from "react-router-dom"
 
+
 export const MAIN_ROUTES = [
     {
         path: 'homePage',

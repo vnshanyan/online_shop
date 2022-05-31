@@ -14,6 +14,85 @@
       "id": "a6e5eb35-1d8b-4278-bad0-5ec740732e7a",
       "name": "vard",
       "password": "ddddd"
+    },
+    {
+      "id": "827a876c-77a0-400b-965f-93f40d5a6286",
+      "name": "vard",
+      "password": "dddddddd"
+    }
+  ],
+  "products": [
+    {
+      "id": "0a88669e-ded8-4803-9c80-cd53c27214f91",
+      "title": "My Title",
+      "quantity": "5",
+      "price": "500$",
+      "src": "https://i.pinimg.com/originals/15/4f/df/154fdf2f2759676a96e9aed653082276.png"
+    },
+    {
+      "id": "0a88669e-ded8-4803-9c80-cd53c27214f92",
+      "title": "My Title",
+      "quantity": "5",
+      "price": "500$",
+      "src": "https://i.pinimg.com/originals/15/4f/df/154fdf2f2759676a96e9aed653082276.png"
+    },
+    {
+      "id": "0a88669e-ded8-4803-9c80-cd53c27214f93",
+      "title": "My Title",
+      "quantity": "5",
+      "price": "500$",
+      "src": "https://i.pinimg.com/originals/15/4f/df/154fdf2f2759676a96e9aed653082276.png"
+    },
+    {
+      "id": "0a88669e-ded8-4803-9c80-cd53c27214f94",
+      "title": "My Title",
+      "quantity": "5",
+      "price": "500$",
+      "src": "https://i.pinimg.com/originals/15/4f/df/154fdf2f2759676a96e9aed653082276.png"
+    },
+    {
+      "id": "0a88669e-ded8-4803-9c80-cd53c27214f95",
+      "title": "My Title",
+      "quantity": "5",
+      "price": "500$",
+      "src": "https://i.pinimg.com/originals/15/4f/df/154fdf2f2759676a96e9aed653082276.png"
+    },
+    {
+      "id": "0a88669e-ded8-4803-9c80-cd53c27214f96",
+      "title": "My Title",
+      "quantity": "5",
+      "price": "500$",
+      "src": "https://i.pinimg.com/originals/15/4f/df/154fdf2f2759676a96e9aed653082276.png"
+    },
+    {
+      "id": "0a88669e-ded8-4803-9c80-cd53c27214f97",
+      "title": "My Title",
+      "quantity": "5",
+      "price": "500$",
+      "src": "https://i.pinimg.com/originals/15/4f/df/154fdf2f2759676a96e9aed653082276.png"
+    },
+    {
+      "id": "0a88669e-ded8-4803-9c80-cd53c27214f98",
+      "title": "My Title",
+      "quantity": "5",
+      "price": "500$",
+      "src": "https://i.pinimg.com/originals/15/4f/df/154fdf2f2759676a96e9aed653082276.png"
+    }
+  ],
+  "cartProducts": [
+    {
+      "id": "3",
+      "image": "https://cdn.vox-cdn.com/thumbor/pjcUw1kyqVQA8sbGFd1mz2g9pog=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/22406771/Exbfpl2WgAAQkl8_resized.jpeg",
+      "title": "Nike sues over Lil Nas X's 'unauthorized Satan Shoes' - The Verge",
+      "price": "100$",
+      "qty": "30"
+    },
+    {
+      "id": "4",
+      "image": "https://images.meesho.com/images/products/52483851/vje6h_512.jpg",
+      "title": "Men Casual Shoes - Buy Men Casual Shoes Online from 22458+ Options at Lowest Price | Meesho",
+      "price": "30$",
+      "qty": "15"
     }
   ]
 }

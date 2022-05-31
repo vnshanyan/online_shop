@@ -12,9 +12,7 @@ root.render(
   <Provider store={store}>
     <BrowserRouter>
       <AuthTabProvider>
-        <React.StrictMode>
-            <App />
-        </React.StrictMode>
+        <App />
       </AuthTabProvider>
     </BrowserRouter>
   </Provider>
