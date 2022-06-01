@@ -1,24 +1,17 @@
 import {createAsyncThunk} from "@reduxjs/toolkit"
 import axios from "axios"
 import {baseUrl} from "../../api/api"
+import {useSelectQuantityProvider} from "../../contexts/SelectQuantityProvider";
 
 export const updateCartProductThunk = createAsyncThunk(
     "productUpdate",
     async (id) => {
         const data = {
-            "id": "1",
-            "image": "https://5.imimg.com/data5/ECOM/Default/2022/5/AP/KJ/HN/148051309/1596107585306-black-4-originnm80prcnt-1000x1000.jpg",
-            "title": "DLS RUNNING SHOES FOR MENS AND BOYS | Shopee India",
-            "price": "50$",
-            "qty": "100"
+            "quantity": id.buyQty
         }
-        await axios.put(`${baseUrl}/cartProducts/${id}`,data)
+        await axios.patch(`${baseUrl}/Products/${id.productId}`,data)
         return data
     })
-
-const cartUpdateThunkPending = (state) => {
-    state.cartProducts = state.cartProducts
-}
 
 const cartUpdateThunkFulfilld = (state, {payload}) => {
     const newUpdateCart = state.cartProducts.map((item) => {
@@ -30,8 +23,7 @@ const cartUpdateThunkFulfilld = (state, {payload}) => {
     state.cartProducts = newUpdateCart
 }
 
-export const cartUpdateeExtraReducer = (builder) => {
+export const cartUpdateExtraReducer = (builder) => {
     builder
-        .addCase(updateCartProductThunk.pending, cartUpdateThunkPending)
         .addCase(updateCartProductThunk.fulfilled, cartUpdateThunkFulfilld)
 }

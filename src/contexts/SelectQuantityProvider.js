@@ -9,11 +9,13 @@ const SelectQuantityProvider = ({children}) => {
         const repeateObj = selectQuantity.find(item=>item.productId===e.target.id)
         if(repeateObj){
             repeateObj.productQty = e.target.value
+            repeateObj.buyQty = Number(e.target.className) - Number(e.target.value)
             return setSelectQuantity([...selectQuantity])
         }
         const newObj = {
             productId:e.target.id,
-            productQty:e.target.value,
+            buyQty:Number(e.target.className) - Number(e.target.value),
+            productQty:e.target.value
         }
         return setSelectQuantity([...selectQuantity,newObj])
     }

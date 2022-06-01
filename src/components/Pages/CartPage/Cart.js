@@ -7,8 +7,9 @@ import {cartProductThunk} from "../../../redux/thunks/cartProductThunk";
 import {useNavigate} from "react-router-dom";
 import {useCartProducts} from "../../../contexts/CartProvider";
 import {useSelectQuantityProvider} from "../../../contexts/SelectQuantityProvider";
+import {updateCartProductThunk} from "../../../redux/thunks/updateCartProductThunk";
 
-let arr = ["2","3","4"]
+let arr = ["2","3","4","16","11","10"]
 sessionStorage.setItem('id',JSON.stringify(arr));
 
 
@@ -19,7 +20,6 @@ const Cart = () => {
     const loginUser = useSelector(userSelector)
     const dispatch = useDispatch()
     const navigate = useNavigate()
-
     useEffect(() => {
         dispatch(cartProductThunk())
     }, [])
@@ -29,6 +29,9 @@ const Cart = () => {
             navigate("/login")
         }else{
             const newArr = cartId.filter(el => el.completed!==true)
+            selectQuantity.filter(element => cartId.find(el => el.id === element.productId)?.completed).forEach((item)=>{
+                 dispatch(updateCartProductThunk(item))
+            })
             setCartId(newArr)
         }
     }
@@ -51,19 +54,23 @@ const Cart = () => {
                 }).map((item,i) => {
                     return (
                         <div key = { item.id } className = { classes.imgItem }>
-                            <div className = { classes.inputChackbox }>
-                                <input type = "checkbox" className = { item.id } onChange = { handleOnchange } checked = { cartId[i].completed }/>
+                            <div className = { classes.inputCheckbox }>
+                                <input type = "checkbox" className = { item.id } onChange = { handleOnchange } checked = { item.completed }/>
                             </div>
                             <div>
-                                <img src = { item.image } alt = "img" width = {170} />
+                                <img src = { item.picture } alt = "img" width = {170} />
                             </div>
                             <div>
-                                <p> { item.title } </p>
-                                <p> price { item.price } </p>
-                                <p> qty { item.qty } </p>
-                                <select onChange = { handleSelect } id = { item.id } value = { selectQuantity.find(el => el.productId === item.id) ?.productQty }>
+                                <h3> { item.name } </h3>
+                                <p> { item.description } </p><br/>
+                                <span> price ${ item.price } </span>
+                                <select onChange = { handleSelect }
+                                        id = { item.id }
+                                        className={ item.quantity }
+                                        value = { selectQuantity.find(el => el.productId === item.id) ?.productQty }>
+                                    <option>QTY</option>
                                     {
-                                        new Array(+item.qty).fill(0).map((item,i)=>{
+                                        new Array(+item.quantity).fill(0).map((item,i)=>{
                                             return <option key = { Math.random()}>{ i + 1 }</option>
                                         })
                                     }

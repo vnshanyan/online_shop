@@ -1,6 +1,6 @@
 import {createSlice} from "@reduxjs/toolkit";
 import { cartExtraReducer } from "../thunks/cartProductThunk"
-import {cartUpdateeExtraReducer} from "../thunks/updateCartProductThunk";
+import {cartUpdateExtraReducer} from "../thunks/updateCartProductThunk";
 
 const initialState = {
     cartProducts: []
@@ -9,15 +9,9 @@ const initialState = {
 const cartSlice = createSlice({
     name: 'cartProducts',
     initialState,
-    reducers: {
-        setUser: (state, {payload}) => {
-            state.cartProducts = payload
-        }
-    },
-
     extraReducers: (builder) => {
         cartExtraReducer(builder)
-        cartUpdateeExtraReducer(builder)
+        cartUpdateExtraReducer(builder)
     }
 })
 
