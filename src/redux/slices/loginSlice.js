@@ -19,6 +19,6 @@ const loginSlice = createSlice({
     extraReducers: (builder) => {}
 })
 
-export const useSelector = state => state.login.loginUser
+export const userSelector = state => state.login.loginUser
 export const {setUser, removeUser} = loginSlice.actions
 export default loginSlice.reducer

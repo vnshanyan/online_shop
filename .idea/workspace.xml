@@ -11,13 +11,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fea1c3aa-24c8-4f42-b6b6-4607235ee75b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/redux/thunks/deleteCartProductТhunk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/thunks/updateCartProductThunk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/contexts/CartProvider.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/contexts/SelectQuantityProvider.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/db.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Pages/CartPage/Cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pages/CartPage/Cart.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Pages/CartPage/Product.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pages/CartPage/Product.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/slices/cartSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/slices/cartSlice.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/slices/loginSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/slices/loginSlice.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/thunks/cartProductThunk.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/thunks/cartProductThunk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/thunks/deleteCartProductТhunk.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +69,10 @@
       <workItem from="1653672844386" duration="3113000" />
       <workItem from="1653733172723" duration="25772000" />
       <workItem from="1653810972439" duration="452000" />
-      <workItem from="1653811455364" duration="12517000" />
+      <workItem from="1653811455364" duration="12848000" />
+      <workItem from="1653977742686" duration="10751000" />
+      <workItem from="1654015363492" duration="5793000" />
+      <workItem from="1654059858237" duration="8437000" />
     </task>
     <servers />
   </component>

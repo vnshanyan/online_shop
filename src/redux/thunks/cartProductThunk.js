@@ -3,9 +3,9 @@ import axios from "axios";
 import {baseUrl} from "../../api/api"
 
 export const cartProductThunk = createAsyncThunk(
-    'selectProducts',
+    'Products',
     async () => {
-        const response = await axios.get(`${baseUrl}/cartProducts`)
+        const response = await axios.get(`${baseUrl}/Products`)
         return response.data
     }
 )
