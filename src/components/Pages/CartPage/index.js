@@ -48,7 +48,7 @@ const Cart = () => {
         <div className = {classes.container}>
             <div className = {classes.headerContainer}>
                 <h2 className={classes.h2Shoping}>
-                    { cartId.length !== 0 ? "Shopping Index" : "Shopping Index Empty" }
+                    { cartId.length !== 0 ? "Shopping cart" : "Shopping cart Empty" }
                 </h2>
                 { text && <p className={classes.pShoping}>Thank you for shopping</p>}
             </div>

@@ -10,16 +10,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fea1c3aa-24c8-4f42-b6b6-4607235ee75b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Pages/CartPage/Item.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Pages/CartPage/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/db.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pages/CartPage/Cart.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pages/CartPage/Product.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pages/CartPage/Product.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pages/HomePage/HomePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pages/HomePage/HomePage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/contexts/CartProvider.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/contexts/CartProvider.js" afterDir="false" />
-    </list>
+    <list default="true" id="fea1c3aa-24c8-4f42-b6b6-4607235ee75b" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -73,7 +64,7 @@
       <workItem from="1654059858237" duration="8665000" />
       <workItem from="1654092439664" duration="1077000" />
       <workItem from="1654093547666" duration="18983000" />
-      <workItem from="1654183525126" duration="7588000" />
+      <workItem from="1654183525126" duration="8018000" />
     </task>
     <servers />
   </component>
