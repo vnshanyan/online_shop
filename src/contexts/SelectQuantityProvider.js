@@ -5,6 +5,7 @@ const SelectQuantityContext = createContext(null)
 const SelectQuantityProvider = ({children}) => {
     const [selectQuantity, setSelectQuantity] = useState([])
 
+    // Onchange function for products_START
     const handleSelect = (e) =>{
         const repeateObj = selectQuantity.find(item=>item.productId===e.target.id)
         if(repeateObj){
@@ -19,6 +20,8 @@ const SelectQuantityProvider = ({children}) => {
         }
         return setSelectQuantity([...selectQuantity,newObj])
     }
+    // Onchange function for products_END
+    
     return (
         <SelectQuantityContext.Provider value={{selectQuantity, setSelectQuantity,handleSelect}}>
             {children}

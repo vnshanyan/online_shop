@@ -1,7 +1,6 @@
 /* eslint-disable */
 
 import { useState } from "react";
-//import { AUTH_TABS } from "../../helpers/constants";
 import classes from "./Register.module.css"
 import { useForm } from "react-hook-form";
 import {useDispatch} from "react-redux"
@@ -9,17 +8,15 @@ import {registerThunk} from "../../redux/thunks/registerThunk"
 import { v4 as uuidv4 } from 'uuid';
 import { useNavigate } from "react-router-dom";
 
-//const [LOGIN] = AUTH_TABS
-
 const Register = () => {
     const dispatch = useDispatch()
     const navigate = useNavigate()
     const [isRegisterSucceed, setIsRegisterSucceed] = useState(null);
-   // const {setAuthRoute} = useAuthTab()
     const {register, handleSubmit, formState: {errors}} = useForm()
 
     const onSubmit = data => {
         if(data.password === data.rePassword){
+            // Create User in DB_START
             const userId = uuidv4()
             const user = {
                 id: userId,
@@ -27,6 +24,7 @@ const Register = () => {
                 password: data.password
             }
             dispatch(registerThunk({user}))
+            // Create User in DB_END
             navigate('/login')
         }else{
             setIsRegisterSucceed(false)

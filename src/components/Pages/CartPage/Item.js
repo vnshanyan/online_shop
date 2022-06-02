@@ -1,4 +1,4 @@
-import classes from "./Product.module.css";
+import classes from "./CartPage.module.css";
 import React from "react";
 import { useCartProducts } from "../../../contexts/CartProvider";
 import { useSelectQuantityProvider } from "../../../contexts/SelectQuantityProvider";

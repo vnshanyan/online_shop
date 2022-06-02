@@ -14,21 +14,28 @@ const Login = () => {
     const navigate = useNavigate()
 
     const onSubmit = assgnData => {
+        // Get Users list from DB_START
         axios.get(`${baseUrl}/users`)
             .then(res => {
+                // Find user according to values of login and password_START
                 const user = res.data.find(item => item.name === assgnData.login && item.password === assgnData.password)
+                // Find user according to values of login and password_END
                 if(user){
+                    // If user exist? set user info in localStorage or SessionStorage according to returned value of Remember me checkbox_START
                     if(assgnData.save){
                         localStorage.setItem('user', assgnData.login)
                     } else {
                         sessionStorage.setItem('user', assgnData.login)
                     }
+                    // If user exist? set user info in localStorage or SessionStorage according to returned value of Remember me checkbox_END
+                    
                     dispatch(setUser(assgnData.login))
                     navigate('../homePage')
                 }else{
                     setIsLoginFailed(true)
                 }
             })
+        // Get Users list from DB_END
     }
 
     return (

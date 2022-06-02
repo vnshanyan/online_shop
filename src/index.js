@@ -5,7 +5,7 @@ import App from './App';
 import { BrowserRouter } from 'react-router-dom';
 import store from './redux/store';
 import { Provider } from 'react-redux';
-import AuthTabProvider from './contexts/AuthTabProvider';
+//import AuthTabProvider from './contexts/AuthTabProvider';
 import CartProvider from "./contexts/CartProvider";
 import SelectQuantityProvider from "./contexts/SelectQuantityProvider";
 
@@ -15,9 +15,9 @@ root.render(
     <CartProvider>
       <SelectQuantityProvider>
         <BrowserRouter>
-          <AuthTabProvider>
+          {/* <AuthTabProvider> */}
             <App />
-          </AuthTabProvider>
+          {/* </AuthTabProvider> */}
         </BrowserRouter>
       </SelectQuantityProvider>
     </CartProvider>

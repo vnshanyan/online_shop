@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import classes from "./Product.module.css";
+import classes from "./CartPage.module.css";
 import { useDispatch,useSelector } from "react-redux";
 import { cartSelector } from "../../../redux/slices/cartSlice"
 import { loginSelector } from "../../../redux/slices/loginSlice"
@@ -32,29 +32,37 @@ const Cart = () => {
         if(!loginUser){
             navigate("/login")
         }else{
-            console.log('selectQuantity: ',selectQuantity);
+            // selectQuantity <=> Selected products
             if(selectQuantity.some(el=>el.productQty)){
+                // Is one of the products checked?
                 if(cartId.some(el => el.completed)){
                     const newArr = cartId.filter(el => el.completed!==true)
+                    // Update information in DB_START
                     selectQuantity.filter(element => cartId.find(el => el.id === element.productId)?.completed).forEach((item)=>{
                         dispatch(updateCartProductThunk(item))
                     })
+                    // Update information in DB_START
+                    // Successful
                     setCartId(newArr)
                     setText(prev=>!prev)
                     setTimeout(()=>{
                         setText(false)
                     },4000)
                 }else{
+                    // Set ERROR text_START
                     setErrText(prev=>!prev)
                     setTimeout(()=>{
                         setErrText(false)
                     },4000)
+                    // Set ERROR text_END
                 }
             }else{
+                // Set ERROR text_START
                 setErrText(prev=>!prev)
                 setTimeout(()=>{
                     setErrText(false)
                 },4000)
+                // Set ERROR text_END
             }
         }
     }

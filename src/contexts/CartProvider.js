@@ -4,6 +4,7 @@ const CartContext = createContext(null)
 
 const CartProvider = ({children}) => {
     const [cartId,setCartId] = useState(JSON.parse(sessionStorage.getItem('id')) || null)
+
     useEffect(() => {
         const obj = cartId.map((item)=>{
             return {
@@ -13,9 +14,12 @@ const CartProvider = ({children}) => {
         })
         setCartId(obj)
     }, [])
+
     useEffect(() => {
         sessionStorage.setItem('id',JSON.stringify(cartId))
     }, [cartId])
+
+    // ADD product in session_START
     const handleOnchange = useCallback((e) =>{
         const newArr = cartId.map((index) =>{
             if(e.target.className===index.id){
@@ -28,10 +32,15 @@ const CartProvider = ({children}) => {
         })
         setCartId(newArr)
     },[cartId])
+    // ADD product in session_END
+
+    // Delete product from session_START
     const onDelete = (i) =>{
         const newCartId = cartId.filter((el,index) => index!==i)
         setCartId(newCartId)
     }
+    // Delete product from session_END
+
     return (
         <CartContext.Provider value={{cartId, setCartId,handleOnchange,onDelete}}>
             {children}
