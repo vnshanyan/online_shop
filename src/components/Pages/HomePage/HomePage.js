@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux"
 import { getProductsThunk } from "../../../redux/thunks/getProductsThunk"
 import { useEffect } from "react"
 import { getProductsSelector } from "../../../redux/slices/getProductsSlice"
-
+import Cart from "../CartPage"
 
 const HomePage = () => {
     const dispatch = useDispatch()
@@ -14,11 +14,8 @@ const HomePage = () => {
         dispatch(getProductsThunk())
     }, [])
 
-    console.log(someProducts);
     return (
-        <div>
-            HomePage
-        </div>
+            <Cart/>
     )
 }
 

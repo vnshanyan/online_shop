@@ -1,0 +1,46 @@
+.container{
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap:20px;
+    padding-top:10px;
+    padding-bottom:50px ;
+}
+
+.imgItem{
+    background-color: #dedede;
+    padding:10px;
+    display: flex;
+    gap: 15px;
+    grid-column-end: 10;
+    grid-column-start: 2;
+    border: 1px solid rgba(0, 0, 0, 0.53);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+.inputCheckbox{
+    display: grid;
+    align-content: center;
+}
+.deleteItem{
+    display: flex;
+    align-items: end;
+}
+.buyButton{
+    grid-column-start: 10;
+    grid-column-end: 12;
+}
+.headerContainer{
+    text-align: center;
+    grid-column-start: 2;
+    grid-column-end: 12;
+}
+.h2Shoping{
+    position: relative;
+}
+.pShoping{
+    position: absolute;
+    background-color: rgba(127, 255, 212, 0.62);
+    border-radius: 10px;
+    padding: 10px 150px 10px 150px;
+}

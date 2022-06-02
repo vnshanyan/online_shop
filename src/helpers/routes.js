@@ -1,6 +1,7 @@
 import HomePage from "../components/Pages/HomePage/HomePage"
 import Login from "../components/Login/Login"
 import Register from "../components/Register/Register"
+import Cart from "../components/Pages/CartPage"
 import { Navigate } from "react-router-dom"
 
 
@@ -28,7 +29,7 @@ export const MAIN_ROUTES = [
     {
         path: 'cart',
         title: 'Cart',
-        element: <Register />
+        element: <Cart/>
     }
 ]
 

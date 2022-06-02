@@ -13,11 +13,11 @@ const Header = () => {
     const dispatch = useDispatch()
     const user = useSelector(loginSelector)
     const countCartProducts = useSelector(getCartProductsSelector)
-    useEffect(() => {
-        dispatch(getCartProductsThunk())
-    }, [])
+    // useEffect(() => {
+    //     dispatch(getCartProductsThunk())
+    // }, [])
 
-    console.log(countCartProducts);
+  //  console.log(countCartProducts);
 
     const logOut = () => {
        sessionStorage.removeItem('user')
@@ -33,29 +33,27 @@ const Header = () => {
             <nav>
                 <ul className={classes.ul}>
                     {
-                        MAIN_ROUTES.map(link => {
+                        MAIN_ROUTES.map(({path,title}) => {
+                            if((path==='login' || path==='register') && user){
+                                return
+                            }
                             return (
-                                <li key={link.path}>
+                                <li key={path}>
                                     <NavLink
                                         className={({isActive}) => 
                                             classNames(classes.link,{
                                                 [classes.active]: isActive
                                             })
                                         }
-                                        to={link.path}
+                                        to={path}
                                     >
-                                        {link.path!=='cart' && link.path!=='login' && link.path!=='register' && link.title}
-                                        {(link.path==='login' && !user)  && link.title}
-                                        {(link.path==='register' && !user)  && link.title}
-                                        {link.path==='cart' && <img className={classes.cart}
+                                        {title}
+                                        {path==='cart' && <img className={classes.cart}
                                             src="https://i.pinimg.com/originals/15/4f/df/154fdf2f2759676a96e9aed653082276.png"/>
                                         }
-                                        {link.path==='cart' && countCartProducts ? (
+                                        {path==='cart' && countCartProducts ? (
                                             <button className={classes.prodCount}>{countCartProducts}</button>
-                                        ) : (
-                                            ''
-                                        )}
-                                        {link.path==='cart' && link.title}
+                                        ) : ('')}
                                     </NavLink>
                                 </li>
                             )
@@ -67,11 +65,6 @@ const Header = () => {
                 <Link className={classes.logOut} onClick={logOut} to="homePage">Log out</Link>
                 </div>)
             }
-            {/* <Link to="cart" className={classes.cart}>
-                <img height="50px" width="auto"
-                    src="https://i.pinimg.com/originals/15/4f/df/154fdf2f2759676a96e9aed653082276.png"/>
-                Cart
-            </Link> */}
         </header>
     )
 }

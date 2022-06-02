@@ -3,11 +3,13 @@ import loginReducer from "./slices/loginSlice"
 import registerReducer from "./slices/registerSlice"
 import getProductsReducer from "./slices/getProductsSlice"
 import getCartProductsReducer from "./slices/getCartProductsSlice"
+import cartReducer from "./slices/cartSlice"
 
 export const rootReducer = combineReducers({
-    loginReducer: loginReducer,
-    registerReducer: registerReducer,
-    getProductsReducer: getProductsReducer,
-    getCartProductsReducer: getCartProductsReducer
+    loginReducer,
+    registerReducer,
+    getProductsReducer,
+    getCartProductsReducer,
+    cartProducts:cartReducer
 })
 
