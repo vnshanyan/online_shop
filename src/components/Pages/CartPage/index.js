@@ -18,6 +18,7 @@ const Cart = () => {
     const { cartId,setCartId} = useCartProducts()
     const { selectQuantity } = useSelectQuantityProvider()
     const [text,setText] = useState(false)
+    const [errText,setErrText] = useState(false)
     const cartProducts = useSelector(cartSelector)
     const loginUser = useSelector(loginSelector)
     const dispatch = useDispatch()
@@ -25,6 +26,7 @@ const Cart = () => {
     useEffect(() => {
         dispatch(cartProductThunk())
     }, [])
+
 
     const buySelected = () =>{
         if(!loginUser){
@@ -39,11 +41,20 @@ const Cart = () => {
                     })
                     setCartId(newArr)
                     setText(prev=>!prev)
-                    console.log('text: ',text);
                     setTimeout(()=>{
                         setText(false)
                     },4000)
+                }else{
+                    setErrText(prev=>!prev)
+                    setTimeout(()=>{
+                        setErrText(false)
+                    },4000)
                 }
+            }else{
+                setErrText(prev=>!prev)
+                setTimeout(()=>{
+                    setErrText(false)
+                },4000)
             }
         }
     }
@@ -53,6 +64,8 @@ const Cart = () => {
                 <h2 className={classes.h2Shoping}>
                     { cartId.length !== 0 ? "Shopping cart" : "Shopping cart Empty" }
                 </h2>
+
+                { errText && <p className={classes.error}>Something went wrong!</p>}
                 { text && <p className={classes.pShoping}>Thank you for shopping</p>}
             </div>
             <div className = {classes.buyButton}>

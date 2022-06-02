@@ -44,3 +44,9 @@
     border-radius: 10px;
     padding: 10px 150px 10px 150px;
 }
+.error{
+    position: absolute;
+    background-color: red;
+    border-radius: 10px;
+    padding: 10px 150px 10px 150px;
+}
