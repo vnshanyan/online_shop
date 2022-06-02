@@ -1,4 +1,4 @@
-import Cart from "../CartPage/Cart";
+import Cart from "../CartPage";
 
 const HomePage = () => {
     return (

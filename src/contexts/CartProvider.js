@@ -1,4 +1,4 @@
-import {createContext, useContext, useEffect, useState} from "react";
+import {createContext, useCallback, useContext, useEffect, useState} from "react";
 
 const CartContext = createContext(null)
 
@@ -16,7 +16,7 @@ const CartProvider = ({children}) => {
     useEffect(() => {
         sessionStorage.setItem('id',JSON.stringify(cartId))
     }, [cartId])
-    const handleOnchange = (e) =>{
+    const handleOnchange = useCallback((e) =>{
         const newArr = cartId.map((index) =>{
             if(e.target.className===index.id){
                 return{
@@ -27,7 +27,7 @@ const CartProvider = ({children}) => {
             return index
         })
         setCartId(newArr)
-    }
+    },[cartId])
     const onDelete = (i) =>{
         const newCartId = cartId.filter((el,index) => index!==i)
         setCartId(newCartId)
