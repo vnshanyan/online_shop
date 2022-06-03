@@ -1,0 +1,17 @@
+.contacts {
+
+}
+
+.contactUs {
+	display: flex;
+	flex-direction: column;
+}
+
+.link {
+	color: #fff;
+	text-decoration: none;
+}
+
+.link:hover {
+	text-decoration: underline;
+}

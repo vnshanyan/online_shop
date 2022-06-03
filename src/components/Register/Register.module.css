@@ -1,0 +1,15 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    max-width: 980px;
+    gap: 1rem
+}
+
+.label {
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    padding: 5rem 0;
+}
