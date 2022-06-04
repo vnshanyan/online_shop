@@ -1,77 +1,69 @@
-import {baseUrl} from "../../api/api"
-import { useState } from "react";
-import { AUTH_TABS } from "../../helpers/constants";
-import classes from "./Register.module.css"
-import classNames from "classnames"
-import { useForm } from "react-hook-form";
-import axios from "axios";
-import {useDispatch} from "react-redux"
-import {addUser} from "../../redux/slices/registerSlice"
-import {registerThunk} from "../../redux/thunks/registerThunk"
+/* eslint-disable */
 
-const [LOGIN] = AUTH_TABS
+import { useState } from "react";
+import classes from "./Register.module.css"
+import { useForm } from "react-hook-form";
+import {useDispatch} from "react-redux"
+import {registerThunk} from "../../redux/thunks/registerThunk"
+import { v4 as uuidv4 } from 'uuid';
+import { useNavigate } from "react-router-dom";
 
 const Register = () => {
     const dispatch = useDispatch()
-    const [isRegisterSucceed, setIsRegisterSucceed] = useState(false);
-   // const {setAuthRoute} = useAuthTab()
-   const {register, handleSubmit, formState: {errors}} = useForm()
+    const navigate = useNavigate()
+    const [isRegisterSucceed, setIsRegisterSucceed] = useState(null);
+    const {register, handleSubmit, formState: {errors}} = useForm()
 
     const onSubmit = data => {
         if(data.password === data.rePassword){
+            // Create User in DB_START
+            const userId = uuidv4()
             const user = {
+                id: userId,
                 name: data.login,
                 password: data.password
             }
-            dispatch(registerThunk(user))
-            // axios.post(`${baseUrl}/users`,user)
-            //     .then(res => {
-            //         setIsRegisterSucceed(true)
-            //         dispatch(addUser(data.login))
-            //         // setTimeout(() => {
-            //         //     setAuthRoute(LOGIN)
-            //         // },1000)
-            //     })
+            dispatch(registerThunk({user}))
+            // Create User in DB_END
+            navigate('/login')
         }else{
-            console.log("Passwords are not the same");
+            setIsRegisterSucceed(false)
         }
     }
 
     return (
-        <div className={classes.container}>
+        <section className={classes.formContainer}>
             <form className={classes.form} onSubmit={handleSubmit(onSubmit)}>
-                <label className={classes.label}>
-                    LOGIN
+                <h3>CREATE ACCOUNT</h3>
+                {/* <label className={classes.label}>
+                    Login */}
                     <input {...register('login', {
                         required: true,
-                        minLength: 4})} type="text"/>
+                        minLength: 4})} type="text" placeholder="Login" className={classes.formField}/>
                     <div>{errors?.login?.type}</div>
-                </label>
+                {/* </label> */}
 
-                <label className={classes.label}>
-                    PASSWORD
+                {/* <label className={classes.label}>
+                    Password */}
                     <input {...register('password', {
                         required: true,
-                        minLength: 4})} type="password"/>
+                        minLength: 4})} type="password" placeholder="Password" className={classes.formField}/>
                     <div>{errors?.password?.type}</div>
-                </label>
+                {/* </label> */}
 
-                <label className={classes.label}>
-                    REPEAT PASSWORD
+                {/* <label className={classes.label}>
+                    Repeat Password */}
                     <input {...register('rePassword', {
                         required: true,
-                        minLength: 4})} type="password"/>
+                        minLength: 4})} type="password" placeholder="Re-enter password" className={classes.formField}/>
                     <div>{errors?.rePassword?.type}</div>
-                </label>
-                <button type="submit">Register</button>
+                {/* </label> */}
+                <button type="submit" className={classes.formButton}>Register</button>
+                {isRegisterSucceed == false && <p>Passwords are not the same!</p>}
                 {isRegisterSucceed && <p>Registration succeed!</p>}
 
             </form>
-            {/* <button
-                onClick={() => {setAuthRoute(LOGIN)}}>
-                go to login
-            </button> */}
-        </div>
+        </section>
     )
 }
 

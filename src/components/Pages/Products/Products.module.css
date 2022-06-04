@@ -1,0 +1,22 @@
+.productsSection {
+    align-items: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 30px;
+    width: 100%;
+}
+
+.productsWrapper {
+    display: flex;
+    flex: 0 calc(75% - 15px);
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.productsSearchSection {
+    flex-direction: column;
+}
+
+.productsSearchSection .productsWrapper {
+    width: 100%;
+}

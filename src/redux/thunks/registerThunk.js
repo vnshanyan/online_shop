@@ -1,27 +1,31 @@
-import { createAsyncThunk } from "@reduxjs/toolkit";
-import axios from "axios";
+/* eslint-disable */
+import { createAsyncThunk } from "@reduxjs/toolkit"
+import axios from "axios"
 import {baseUrl} from "../../api/api"
 
 export const registerThunk = createAsyncThunk(
     'registration',
     async ({user}) => {
         const response = await axios.post(`${baseUrl}/users`,user)
-        console.log(response);
-        return response
+        return response.data
     }
 )
 
-
 const registerThunkPending = (state) => {
-    state.userName = ''
+    allUsers: state.allUsers
 }
 
 const registerThunkFulfilled = (state, {payload}) => {
-    state.userName = payload
+    state.allUsers = [payload, ...state.allUsers]
+}
+
+const registerThunkRejected = (state) => {
+    state.allUsers = state.allUsers
 }
 
 export const registerExtraReducer = builder => {
     builder
         .addCase(registerThunk.pending, registerThunkPending)
         .addCase(registerThunk.fulfilled, registerThunkFulfilled)
+        .addCase(registerThunk.rejected, registerThunkRejected)
 }

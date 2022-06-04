@@ -1,0 +1,16 @@
+.featuredProductsSection {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 20px 0;
+    gap: 0 30px;
+    width: 100%;
+}
+
+.featuredProductsWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    width: 100%;
+}

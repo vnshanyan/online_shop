@@ -1,8 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit"
 
 const initialState = {
-    loginUser: localStorage.getItem('user') || sessionStorage.getItem('user') || null,
-    allUsers: []
+    loginUser: localStorage.getItem('user') || sessionStorage.getItem('user') || null
 }
 
 const loginSlice = createSlice({
@@ -11,7 +10,7 @@ const loginSlice = createSlice({
     reducers: {
         setUser: (state, {payload}) => {
             state.loginUser = payload
-          },
+        },
         removeUser: (state) => {
             state.loginUser = null
         }
@@ -19,6 +18,6 @@ const loginSlice = createSlice({
     extraReducers: (builder) => {}
 })
 
-export const useSelector = state => state.login.loginUser
-export const {setUser, removeUser} = loginSlice.actions
+export const loginSelector = state => state.loginReducer.loginUser
+export const { setUser, removeUser} = loginSlice.actions
 export default loginSlice.reducer
