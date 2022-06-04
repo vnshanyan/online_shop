@@ -3,30 +3,7 @@ import {createContext, useCallback, useContext, useEffect, useState} from "react
 const CartContext = createContext(null)
 
 const CartProvider = ({children}) => {
-    const [cartId,setCartId] = useState(
-        (sessionStorage.getItem("id")!=='undefined' && sessionStorage.getItem("id")!=='' && sessionStorage.getItem("id")!==null) ?
-            JSON.parse(sessionStorage.getItem('id')) : null)
-
-  //  const [cartId,setCartId] = useState(null)
-    // useEffect(() => {
-    //     const obj = cartId?.map((item)=>{
-    //         return {
-    //             id:item,
-    //             completed:false
-    //         }
-    //     })
-    //     setCartId(obj)
-    // }, [])
-
-    // useEffect(() => {
-    //     //sessionStorage.setItem('id',JSON.stringify(cartId))
-    //     if(
-    //         sessionStorage.getItem("id")!=='undefined' && 
-    //         sessionStorage.getItem("id")!=='' && sessionStorage.getItem("id")!==null){
-    //             setCartId(JSON.parse(sessionStorage.getItem('id')))
-
-    //         }
-    // }, [])
+    const [cartId,setCartId] = useState((sessionStorage.getItem("id") ? JSON.parse(sessionStorage.getItem('id')) : null))
 
     // ADD product in session_START
     const handleOnchange = useCallback((e) =>{
@@ -45,7 +22,6 @@ const CartProvider = ({children}) => {
 
     // Delete product from session_START
     const onDelete = (i) =>{
-        console.log('deleteIndex: ',i);
         const newCartId = cartId.filter((el,index) => index!==i)
         setCartId(newCartId)
         sessionStorage.setItem("id", JSON.stringify(newCartId));

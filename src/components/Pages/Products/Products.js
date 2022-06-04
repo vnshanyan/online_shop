@@ -28,7 +28,7 @@ const Products = () => {
             <div className={classes.productsWrapper}>
                 {
                 filteredProducts.length > 0 && 
-                    <ProductBlock />
+                    <ProductBlock products={filteredProducts} />
                 }
                 {filteredProducts.length === 0 && "No products for your criteria."}
             </div>

@@ -9,6 +9,8 @@ import { getCartProductsSelector } from "../../redux/slices/getCartProductsSlice
 import { getCartProductsThunk } from "../../redux/thunks/getCartProductsThunk"
 import { useEffect } from "react"
 import SearchForm from "../SearchForm/SearchForm";
+import cartIcon from "../../assets/cartIcon.png";
+import logo from "../../assets/logo.png";
 
 const Header = () => {
     const dispatch = useDispatch()
@@ -39,7 +41,7 @@ const Header = () => {
                 <div className={classes.headerInner}>
                     {/* Creating Logo_START_ */}
                     <Link to="homePage">
-                        <img className={classes.logo} src="https://sekaikokeshi.com/wp-content/uploads/2021/01/kanji_fire.png"/>
+                        <img className={classes.logo} src={logo} alt="logo"/>
                     </Link>
                     {/* Creating Logo_END_ */}
 
@@ -50,7 +52,6 @@ const Header = () => {
                         <ul className={classes.ul}>
                             {
                                 MAIN_ROUTES.map(({path,title}) => {
-                                    console.log(title?.length);
                                     {/* Auth_START_ */}
                                     if (((path === 'login' || path === 'register') && user) || title === ''){
                                         return
@@ -58,7 +59,7 @@ const Header = () => {
                                     {/* Auth_END_ */}
 
                                     return (
-                                        <li key={path}>
+                                        <li key={path} id={`${path}Item`}>
                                             <NavLink
                                                 className={({isActive}) => 
                                                     classNames(classes.link,{
@@ -69,29 +70,26 @@ const Header = () => {
                                             >
                                                 {path !== 'cart' && title}
                                                 {/* SHOW Basket_START_ */}
-                                                {path==='cart' && <img className={classes.cart}
-                                                    src="https://i.pinimg.com/originals/15/4f/df/154fdf2f2759676a96e9aed653082276.png"/>
+                                                {path==='cart' && <img className={classes.cartIcon}
+                                                    src={cartIcon} alt="cartIcon"/>
                                                 }
                                                 {/* SHOW Basket_END_ */}
                                                 {/* SHOW Cart Count_START_ */}
-                                                {path==='cart' && countCartProducts ? (
-                                                    <button className={classes.prodCount}>{countCartProducts}</button>
-                                                ) : ('')}
+                                                {path==='cart' && <button className={classes.prodCount}>{countCartProducts ? countCartProducts: 0}</button>}
                                                 {/* SHOW Cart Count_END_ */}
                                             </NavLink>
                                         </li>
                                     )
                                 })
                             }
+                            {/* Creating LogOut Link_START_ */}
+                            {user && (<li>
+                                <Link className={classes.link} onClick={logOut} to="homePage">Log out</Link>
+                                </li>)
+                            }
+                            {/* Creating LogOut Link_END_ */}
                         </ul>
-                    </nav>
-
-                    {/* Creating LogOut Link_START_ */}
-                    {user && (<div>
-                        <Link className={classes.logOut} onClick={logOut} to="homePage">Log out</Link>
-                        </div>)
-                    }
-                    {/* Creating LogOut Link_END_ */}
+                    </nav>                    
                 </div>
             </div>
         </header>

@@ -1,6 +1,7 @@
 .filtersSidebar {
-    background-color: #FAFAFA;
-    box-shadow: 0 0 3px rgba(0, 0, 0, .5);
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,.125);
+    box-shadow: 0 0.25rem 0.75rem rgb(0 0 0 / 5%);
     flex: 0 calc(25% - 15px);
     padding: 20px;
     position: sticky;
@@ -24,15 +25,16 @@
     margin: 0 0 1rem;
 }
 .changeCategory {
-    border: 1px solid #000;
+    border: 1px solid #bdbdbd;
     cursor: pointer;
     padding: .75rem 0;
-    outline: none;
+    outline: 1px solid transparent;
     transition: .5s;
     width: 100%;
 }
 .changeCategory:focus {
-    border-color: #1976d2;
+    border-color: #3F444C;
+    outline-color: #3F444C;
 }
 
 .filtersFooter {
@@ -40,15 +42,15 @@
     justify-content: space-between;
 }
 .filtersFooter button {
-    background-color: #000;
-    border: 1px solid #000;
+    background-color: #3F444C;
+    border: 1px solid #3F444C;
     color: #fff;
     padding: .5rem;
     transition: .5s;
 }
 .filtersFooter button:hover {
     background-color: #fff;
-    color: #000;
+    color: #3F444C;
     cursor: pointer;
 }
 .clearFilters {

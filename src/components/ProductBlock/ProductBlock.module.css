@@ -1,52 +1,71 @@
 .product {
-    border: 1px solid #000;
-    padding: 10px;
-    background-color: #c6c6c6;
-    border-radius: 10px;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,.125);
+    box-shadow: 0 0.25rem 0.75rem rgb(0 0 0 / 5%);
+    display: flex;
     flex: 0 calc(25% - 15px);
+    flex-direction: column;
+    transition: .5s ease;
+    transform: scale(1) translate(0);
+}
+
+.product:hover {
+    cursor: pointer;
+    transform: scale(1.05) translate(0);
+}
+
+.productImageContainer {
+    display: flex;
+    height: 200px;
+    justify-content: center;
+    padding: .5rem .5rem 0;
+    width: 100%;
 }
 
 .productImageContainer img {
-    width: 100%;
-    height: 200px;
-    border: 1px solid #000;
-    background-color: #c6c6c6;
-    border-radius: 10px;
-    cursor: pointer;
-    object-fit: cover;
+    height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    width: auto;
 }
 
-.product p {
+.productBody {    
+    padding: .75rem 1.25rem 0;
+}
+
+.productBody p {
     font-size: 18px;
     font-weight: 600;
-    margin: 10px;
 }
 
-.product span {
+.productBody span {
     font-size: 14px;
     font-weight: 400;
 }
 
+.productPrice {
+    font-weight: bold;
+}
+
+.productFooter {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;    
+    padding: 0 1.25rem .75rem;
+}
+
 .product button {
-    float: right;
-    width: 95px;
-    height: 30px;
+    color: #fff;
     font-weight: 600;
-    background-color: #717371;
-    border: 1px solid #000;
-    border-radius: 10px;
-    cursor: pointer;
+    background-color: #3F444C;
+    border: 1px solid #3F444C;
     transition: 0.5s;
+    padding: .40rem .50rem;
 }
 
 .product button:hover {
-    width: 95px;
-    height: 30px;
-    font-weight: 600;
-    background-color: #282928;
-    border: 1px solid #000;
-    color: #fff;
-    border-radius: 10px;
+    background-color: #fff;
+    color: #3F444C;
     cursor: pointer;
-    transition: 0.5s;
 }

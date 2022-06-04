@@ -2,6 +2,7 @@ import classes from "./Footer.module.css"
 import classNames from "classnames"
 import FooterContacts from "../FooterContacts/FooterContacts";
 import {Link, NavLink} from "react-router-dom"
+import logo from "../../assets/logo.png";
 
 const Footer = () => {
     return (
@@ -10,7 +11,7 @@ const Footer = () => {
                 <div className={classes.footerInner}>
                     <div className={classes.footerMain}>
                         <Link to="homePage">
-                            <img className={classes.footerLogo} src="https://sekaikokeshi.com/wp-content/uploads/2021/01/kanji_fire.png"/>
+                            <img className={classes.footerLogo} src={logo} alt="logo"/>
                         </Link>
 
                         <div className={classes.footerAboutUs}>

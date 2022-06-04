@@ -32,7 +32,7 @@ const Filters = () => {
     }
 
     const applyFilters = () => {
-        const filtered = filteredProducts?.filter(product => {
+        const filtered = allProducts?.filter(product => {
             if( price.length !== 0 && category !== '' ) {
                 return product.price >= price[0] && product.price <= price[1] && product.category === category
             }else if( price.length !== 0 ) {                

@@ -8,15 +8,14 @@
 }
 
 .imgItem{
-    background-color: #dedede;
-    padding:10px;
+    padding:20px;
     display: flex;
     gap: 15px;
     grid-column-end: 10;
-    grid-column-start: 2;
-    border: 1px solid rgba(0, 0, 0, 0.53);
-    border-radius: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    grid-column-start: 2;    
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,.125);
+    box-shadow: 0 0.25rem 0.75rem rgb(0 0 0 / 5%);
 
 }
 .inputCheckbox{

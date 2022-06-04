@@ -39,18 +39,18 @@ const Login = () => {
     }
 
     return (
-        <div className={classes.container}>
+        <section className={classes.formContainer}>
             <form className={classes.form} onSubmit={handleSubmit(onSubmit)}>
                 <h3>SIGN IN</h3>
                 {/* <label className={classes.label}>
                     Login */}
-                    <input {...register('login', {required: true})} type="text" placeholder="Login"/>
+                    <input {...register('login', {required: true})} type="text" placeholder="Login" className={classes.formField}/>
                     <div>{errors?.login?.type}</div>
                 {/* </label> */}
 
                 {/* <label className={classes.label}>
                     Password */}
-                    <input {...register('password', {required: true})} type="password" placeholder="Password"/>
+                    <input {...register('password', {required: true})} type="password" placeholder="Password" className={classes.formField}/>
                     <div>{errors?.password?.type}</div>
                 {/* </label> */}
 
@@ -58,10 +58,10 @@ const Login = () => {
                     <input type="checkbox" {...register('save')}/>
                     Remember me?
                 </label>
-                <button type="submit">Log in</button>
+                <button type="submit" className={classes.formButton}>Log in</button>
             </form>
             {(isLoginFailed || (errors.login || errors.password)) && <span>User is not found!</span>}
-        </div>
+        </section>
     )
 }
 

@@ -32,14 +32,14 @@ const Register = () => {
     }
 
     return (
-        <div className={classes.container}>
+        <section className={classes.formContainer}>
             <form className={classes.form} onSubmit={handleSubmit(onSubmit)}>
                 <h3>CREATE ACCOUNT</h3>
                 {/* <label className={classes.label}>
                     Login */}
                     <input {...register('login', {
                         required: true,
-                        minLength: 4})} type="text" placeholder="Login"/>
+                        minLength: 4})} type="text" placeholder="Login" className={classes.formField}/>
                     <div>{errors?.login?.type}</div>
                 {/* </label> */}
 
@@ -47,7 +47,7 @@ const Register = () => {
                     Password */}
                     <input {...register('password', {
                         required: true,
-                        minLength: 4})} type="password" placeholder="Password"/>
+                        minLength: 4})} type="password" placeholder="Password" className={classes.formField}/>
                     <div>{errors?.password?.type}</div>
                 {/* </label> */}
 
@@ -55,15 +55,15 @@ const Register = () => {
                     Repeat Password */}
                     <input {...register('rePassword', {
                         required: true,
-                        minLength: 4})} type="password" placeholder="Re-enter password"/>
+                        minLength: 4})} type="password" placeholder="Re-enter password" className={classes.formField}/>
                     <div>{errors?.rePassword?.type}</div>
                 {/* </label> */}
-                <button type="submit">Register</button>
+                <button type="submit" className={classes.formButton}>Register</button>
                 {isRegisterSucceed == false && <p>Passwords are not the same!</p>}
                 {isRegisterSucceed && <p>Registration succeed!</p>}
 
             </form>
-        </div>
+        </section>
     )
 }
 

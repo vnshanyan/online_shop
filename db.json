@@ -82,7 +82,7 @@
       "name": "Led Lamp",
       "description": "E27 E14 B22 G9 LED Maïs Ampoule 5W 8W 15W 20W 25W SMD5730 Blanc Chaud/Froid 220V",
       "price": 2.08,
-      "quantity": 40,
+      "quantity": 39,
       "picture": "https://i.ebayimg.com/images/g/LK4AAOSwBQZg98y2/s-l400.jpg"
     },
     {
@@ -91,7 +91,7 @@
       "name": "Modern Chandelier",
       "description": "Hanging Lamp Pendant Ceiling Fixture Chandelier for Kitchen",
       "price": 22.99,
-      "quantity": 12,
+      "quantity": 11,
       "picture": "https://ae01.alicdn.com/kf/HTB14M7GazfguuRjSspaq6yXVXXau/Modern-Glass-Kitchen-Island-Pendant-Light-LED-lamp-Bedside-Hanging-Lamp-Ceiling-Lamps-Lighting-Fixtures-Bedroom.jpg_Q90.jpg_.webp"
     },
     {
@@ -170,19 +170,19 @@
   "homeSlides": [
     {
       "id": 1,
-      "slideImage": "https://cdn.movertix.com/media/catalog/product/cache/image/1200x/x/i/xiaomi-redmi-note-9-dual-sim-onyx-black-128gb-and-4gb-ram-side_3.jpg"
+      "slideImage": "https://www.apple.com/newsroom/images/product/iphone/standard/Apple_iphone13_design_09142021_big.jpg.slideshow-xlarge_2x.jpg"
     },
     {
       "id": 2,
-      "slideImage": "https://i.ebayimg.com/images/g/BAMAAOSwhQJhC3ty/s-l500.png"
+      "slideImage": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/coffee-espresso-machine-combinations-1648841262.jpg?crop=0.814xw:0.732xh;0.0721xw,0.144xh&resize=1200:*"
     },
     {
       "id": 3,
-      "slideImage": "https://i.ebayimg.com/images/g/ROMAAOSwnj9g3IfR/s-l640.jpg"
+      "slideImage": "https://www.adorama.com/alc/wp-content/uploads/2018/05/shutterstock_681721870-1.jpg"
     },
     {
       "id": 4,
-      "slideImage": "https://m.media-amazon.com/images/I/71FJf49CPeL._AC_SL1500_.jpg"
+      "slideImage": "https://images.samsung.com/ru/smartphones/galaxy-s21-ultra-5g/images/galaxy-s21-ultra-5g-share-image.jpg"
     }
   ]
 }
