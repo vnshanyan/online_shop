@@ -8,7 +8,7 @@ const Item = ({productData,index}) => {
     const { id,completed,picture,name,description,quantity,price } = productData
     const { handleOnchange,onDelete } = useCartProducts()
     const { selectQuantity,handleSelect } = useSelectQuantityProvider()
-    
+
     return(
         <div className = { classes.imgItem }>
             <div className = { classes.inputCheckbox }>

@@ -10,9 +10,8 @@ import { updateCartProductThunk } from "../../../redux/thunks/updateCartProductT
 import { useNavigate } from "react-router-dom";
 import Item from "./Item";
 
-let arr = ["2","3","4","16","11","10"]
-sessionStorage.setItem('id',JSON.stringify(arr));
-
+// let arr = ["2","3","4","16","11","10"]
+// sessionStorage.setItem('id',JSON.stringify(arr));
 
 const Cart = () => {
     const { cartId,setCartId} = useCartProducts()
@@ -70,7 +69,8 @@ const Cart = () => {
         <div className = {classes.container}>
             <div className = {classes.headerContainer}>
                 <h2 className={classes.h2Shoping}>
-                    { cartId.length !== 0 ? "Shopping cart" : "Shopping cart Empty" }
+                    {console.log('cartId: ',cartId)}
+                    { (cartId === undefined || cartId === 'null' || cartId?.length !== 0) ? "Shopping cart" : "Shopping cart Empty" }
                 </h2>
 
                 { errText && <p className={classes.error}>Something went wrong!</p>}
@@ -81,7 +81,7 @@ const Cart = () => {
             </div>
             {
                 cartProducts.filter((el) => {
-                    return cartId.some(item => item.id === el.id) && el
+                    return cartId?.some(item => item.id === el.id) && el
                 }).map((item,i) => {
                     return <Item key={item.id} productData={item} index={i}/>
                 })

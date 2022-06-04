@@ -6,11 +6,15 @@ import {ROUTES} from "./helpers/routes"
 const  App = () => {
   const routes = useRoutes(ROUTES)
   return (
-    <div className="container">
+    <>
       <Header />
-        {routes}
+      <main className="main">
+        <div className="container">
+          {routes}
+        </div>
+      </main>
       <Footer />
-    </div>
+    </>
   );
 }
 

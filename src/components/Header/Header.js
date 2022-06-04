@@ -8,11 +8,18 @@ import { useSelector } from "react-redux"
 import { getCartProductsSelector } from "../../redux/slices/getCartProductsSlice"
 import { getCartProductsThunk } from "../../redux/thunks/getCartProductsThunk"
 import { useEffect } from "react"
+import SearchForm from "../SearchForm/SearchForm";
+import cartIcon from "../../assets/cartIcon.png";
+import logo from "../../assets/logo.png";
 
 const Header = () => {
     const dispatch = useDispatch()
     const user = useSelector(loginSelector)
-    const countCartProducts = useSelector(getCartProductsSelector)
+    
+    const countCartProducts = (
+        sessionStorage.getItem("id")!=='undefined' && sessionStorage.getItem("id")!=='' && sessionStorage.getItem("id")!==null) ?
+            JSON.parse(sessionStorage.getItem("id")).length : ''
+    //const countCartProducts = useSelector(getCartProductsSelector)
     // useEffect(() => {
     //     dispatch(getCartProductsThunk())
     // }, [])
@@ -30,56 +37,61 @@ const Header = () => {
 
     return (
         <header className={classes.header}>
-             {/* Creating Logo_START_ */}
-            <Link to="homePage">
-                <img className={classes.logo} src="https://sekaikokeshi.com/wp-content/uploads/2021/01/kanji_fire.png"/>
-            </Link>
-             {/* Creating Logo_END_ */}
-            <nav>
-                <ul className={classes.ul}>
-                    {
-                        MAIN_ROUTES.map(({path,title}) => {
-                            {/* Auth_START_ */}
-                            if((path==='login' || path==='register') && user){
-                                return
+            <div className="container">
+                <div className={classes.headerInner}>
+                    {/* Creating Logo_START_ */}
+                    <Link to="homePage">
+                        <img className={classes.logo} src={logo} alt="logo"/>
+                    </Link>
+                    {/* Creating Logo_END_ */}
+
+                    {/* SearchForm_START */}
+                    <SearchForm />
+                    {/* SearchForm_END */}
+                    <nav>
+                        <ul className={classes.ul}>
+                            {
+                                MAIN_ROUTES.map(({path,title}) => {
+                                    {/* Auth_START_ */}
+                                    if (((path === 'login' || path === 'register') && user) || title === ''){
+                                        return
+                                    }
+                                    {/* Auth_END_ */}
+
+                                    return (
+                                        <li key={path} id={`${path}Item`}>
+                                            <NavLink
+                                                className={({isActive}) => 
+                                                    classNames(classes.link,{
+                                                        [classes.active]: isActive
+                                                    })
+                                                }
+                                                to={path}
+                                            >
+                                                {path !== 'cart' && title}
+                                                {/* SHOW Basket_START_ */}
+                                                {path==='cart' && <img className={classes.cartIcon}
+                                                    src={cartIcon} alt="cartIcon"/>
+                                                }
+                                                {/* SHOW Basket_END_ */}
+                                                {/* SHOW Cart Count_START_ */}
+                                                {path==='cart' && <button className={classes.prodCount}>{countCartProducts ? countCartProducts: 0}</button>}
+                                                {/* SHOW Cart Count_END_ */}
+                                            </NavLink>
+                                        </li>
+                                    )
+                                })
                             }
-                            {/* Auth_END_ */}
-
-                            return (
-                                <li key={path}>
-                                    <NavLink
-                                        className={({isActive}) => 
-                                            classNames(classes.link,{
-                                                [classes.active]: isActive
-                                            })
-                                        }
-                                        to={path}
-                                    >
-                                        {title}
-                                        {/* SHOW Basket_START_ */}
-                                        {path==='cart' && <img className={classes.cart}
-                                            src="https://i.pinimg.com/originals/15/4f/df/154fdf2f2759676a96e9aed653082276.png"/>
-                                        }
-                                        {/* SHOW Basket_END_ */}
-                                        {/* SHOW Cart Count_START_ */}
-                                        {path==='cart' && countCartProducts ? (
-                                            <button className={classes.prodCount}>{countCartProducts}</button>
-                                        ) : ('')}
-                                        {/* SHOW Cart Count_END_ */}
-                                    </NavLink>
-                                </li>
-                            )
-                        })
-                    }
-                </ul>
-            </nav>
-
-            {/* Creating LogOut Link_START_ */}
-            {user && (<div>
-                <Link className={classes.logOut} onClick={logOut} to="homePage">Log out</Link>
-                </div>)
-            }
-            {/* Creating LogOut Link_END_ */}
+                            {/* Creating LogOut Link_START_ */}
+                            {user && (<li>
+                                <Link className={classes.link} onClick={logOut} to="homePage">Log out</Link>
+                                </li>)
+                            }
+                            {/* Creating LogOut Link_END_ */}
+                        </ul>
+                    </nav>                    
+                </div>
+            </div>
         </header>
     )
 }

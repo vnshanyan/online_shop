@@ -3,21 +3,7 @@ import {createContext, useCallback, useContext, useEffect, useState} from "react
 const CartContext = createContext(null)
 
 const CartProvider = ({children}) => {
-    const [cartId,setCartId] = useState(JSON.parse(sessionStorage.getItem('id')) || null)
-
-    useEffect(() => {
-        const obj = cartId.map((item)=>{
-            return {
-                id:item,
-                completed:false
-            }
-        })
-        setCartId(obj)
-    }, [])
-
-    useEffect(() => {
-        sessionStorage.setItem('id',JSON.stringify(cartId))
-    }, [cartId])
+    const [cartId,setCartId] = useState((sessionStorage.getItem("id") ? JSON.parse(sessionStorage.getItem('id')) : null))
 
     // ADD product in session_START
     const handleOnchange = useCallback((e) =>{
@@ -38,6 +24,7 @@ const CartProvider = ({children}) => {
     const onDelete = (i) =>{
         const newCartId = cartId.filter((el,index) => index!==i)
         setCartId(newCartId)
+        sessionStorage.setItem("id", JSON.stringify(newCartId));
     }
     // Delete product from session_END
 
