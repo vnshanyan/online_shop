@@ -12,21 +12,34 @@ const ProductDetail = () => {
     const productId = useParams();
     const productDetail = allProducts.filter(item => item.id == productId.id);
     const product = productDetail[0];
-    const [addToCart, setAddToCart] = useState(JSON.parse(localStorage.getItem("id")) || []);
+    const [addToCart, setAddToCart] = useState(
+        (sessionStorage.getItem("id")!=='undefined' && sessionStorage.getItem("id")!=='' && sessionStorage.getItem("id")!==null)
+         ? JSON.parse(sessionStorage.getItem("id")) : []);
 
+    /*
     useEffect(() => {
-        localStorage.setItem("id", JSON.stringify(addToCart));
-    }, [addToCart])
-
+        sessionStorage.setItem("id", JSON.stringify(addToCart));
+    }, [])
+    */
     const handleAddToCart = (id) => {
-        const arr = [...addToCart, id];
-        
-        if (!addToCart.includes(id)) {
-            console.log(arr);
-            setAddToCart(arr);
-        }
+        const arr = [...addToCart, {id, completed: false}];
+       // console.log(sessionStorage.getItem("id"));
+        // if(sessionStorage.getItem("id")!==undefined && sessionStorage.getItem("id") !=='' ){
+        //     arr = [...addToCart, {id, completed: false}];
+        // }else{
+        //     arr = [{id, completed: false}];
+        // }
+
+      const checkID = addToCart.find(el => {
+        return el.id === id
+      });
+      console.log(checkID === undefined);
+      if(checkID === undefined){
+        setAddToCart(arr);
+        sessionStorage.setItem("id", JSON.stringify(arr));
+      }
     }
-    console.log(addToCart);
+    console.log('addToCart: ',addToCart);
 
     return (
         <>

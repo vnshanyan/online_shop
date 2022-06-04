@@ -13,7 +13,11 @@ import SearchForm from "../SearchForm/SearchForm";
 const Header = () => {
     const dispatch = useDispatch()
     const user = useSelector(loginSelector)
-    const countCartProducts = useSelector(getCartProductsSelector)
+    
+    const countCartProducts = (
+        sessionStorage.getItem("id")!=='undefined' && sessionStorage.getItem("id")!=='' && sessionStorage.getItem("id")!==null) ?
+            JSON.parse(sessionStorage.getItem("id")).length : ''
+    //const countCartProducts = useSelector(getCartProductsSelector)
     // useEffect(() => {
     //     dispatch(getCartProductsThunk())
     // }, [])
